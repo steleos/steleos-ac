@@ -1,0 +1,333 @@
+body, html{
+    padding: 0;
+    margin: 0;   
+    background-color: #E5E5E5;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+
+    padding: 0;
+    margin: 0;
+
+
+
+    font-family: sans-serif;
+    font-style: normal;
+}
+header{
+    display: none;
+}
+.mainContainer{
+    padding: 0;
+    margin: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+.mainContainer .encriptador{
+    margin: 40px;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mainContainer .encriptador .logo img{
+    width: 120px;
+    height: 48px;
+}
+.mainContainer .encriptador .textoContainer{
+    margin-left: 200px;
+
+    & input{
+        border-style: none;
+        background-color: #E5E5E5;
+
+        width: 50vw;
+        height: 48px;
+
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+
+        overflow-y: scroll;
+    }
+}
+.mainContainer .encriptador .botones{
+    margin-left: 200px;
+    padding: 0;
+
+    & button{
+
+        width: 328px;
+        height: 67px;
+
+        border-radius: 24px;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+
+    }
+}
+.mainContainer .encriptador .botones .alerta{
+    & p{
+        width: 250px;
+        height: 18px;   
+
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+
+        & img{
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+        }
+    }
+}
+.botones button:first-of-type{
+    background-color: #0A3871;
+    color: white;
+    margin-right: 24px;
+}
+.botones button:last-of-type{
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+.mainContainer .resultado{
+    background-color: #FFFFFF;
+
+    margin: 40px;
+
+    width: 400px;
+    padding: 0;
+    border-radius: 32px;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.mainContainer .resultado .resultadoOculto{
+
+    display: none;
+
+    & p{
+        width: 336px;
+        height: 80vh;
+
+        margin: 32px;
+
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+
+        color: #495057;
+
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    & button{
+        width: 336px;
+        height: 67px;
+
+        margin: 32px;
+
+        border-radius: 24px;
+
+        background-color: #FFFFFF;
+        color: #0A3871;
+
+        align-self: flex-end;
+
+        box-sizing: border-box;
+        border: 1px solid #0A3871;
+    }
+}
+.mainContainer .resultado .sinResultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & img{
+        width: 336px;
+        height: 304px;
+
+        margin-top: 100%;
+    }
+    
+    .textoSinResultado{
+
+        text-align: center;
+
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}
+.sinResultado .textoSinResultado :first-child{
+    width: 336px;
+    height: 58px;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+
+    color: #343A40;
+}
+.sinResultado .textoSinResultado :last-child{
+    width: 336px;
+    height: 48px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #495057;
+}
+
+@media (max-width:768px){
+    .mainContainer{
+        margin: 0;
+        padding: 0;
+
+        width: 100vw;
+        height: 100vh;
+    }
+    .mainContainer .encriptador{
+        padding: 0;
+        margin: 0;
+    }
+    .mainContainer .encriptador .logo img{
+        margin-top: 73.42px;
+    }   
+    .mainContainer .encriptador .textoContainer{
+        margin-top: 116px;
+        margin-left: 40PX;
+        margin-bottom: 548px;
+
+        & input{
+            width: 688px;
+        }
+    }
+    .mainContainer .encriptador .botones{
+        margin-left: 40px;
+    }
+    .mainContainer .resultado{
+    margin: 40px;
+    width: 688px;
+    }
+    .mainContainer .resultado .resultadoOculto{
+        margin: 0;
+        padding: 0;
+    & p{
+        width: 624px;
+    }
+
+    & button{
+        width: 624px;
+        height: 67px;
+    }
+    }
+    .mainContainer .resultado .sinResultado{
+    & img{
+        display: none;
+    }
+
+    .textoSinResultado{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+
+        width: 624px;
+
+        margin: 32px;
+
+        & p{
+            padding: 0;
+            margin: 0;
+        }
+    }
+    }
+}
+
+@media (max-width: 375px){
+    header{
+        display: block;
+
+        width: 100vw;
+        height: 96px;
+
+        & img{
+            margin-top: 24px;
+            margin-bottom: 24px;
+            margin-left: 16px;
+        }
+    }
+    .mainContainer{
+        align-content: flex-start;
+    }
+    .mainContainer .encriptador{
+        justify-content: start;
+    }
+    .mainContainer .encriptador .logo img{
+        display: none;
+    }
+    .mainContainer .encriptador .textoContainer{
+        margin-top: 56px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 251px;
+        
+        & input{
+            width: 343px;
+            height: 48px;
+        }
+    }
+    .mainContainer .encriptador .botones{
+        margin-left: 16px;
+
+        & button:first-of-type{
+            margin-bottom: 24px;
+        }
+    }
+    .mainContainer .resultado{
+        padding: 0;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 24px;
+        margin-top: 64px;
+        width: 343px;
+    }
+    .mainContainer .resultado .sinResultado .textoSinResultado p:first-of-type{
+        margin-bottom: 16px;
+    }
+    .mainContainer .resultado .resultadoOculto{
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        display: none;
+
+        & p{
+            width: 279px;
+            padding: 32px;
+
+            height: auto;
+        }
+
+        & button{
+            width: 279px;
+        }
+    }
+}

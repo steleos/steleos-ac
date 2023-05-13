@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>ALURA CHALLENGE - Steleos</title>
+
+    <script defer src="./javascript/script.js"></script>
+</head>
+<body>
+    <main>
+
+        <header class="movil">
+            <img src="./imagenes/Top.png" alt="logo">
+        </header>
+        <!--contenedor principal del contenido-->
+        <div class="mainContainer">
+
+            <!---->
+            <section class="encriptador">
+                <div>
+                    <!--contenedor del logo-->
+                    <div class="logo">
+                        <img src="./imagenes/Logo.png" alt="">
+                    </div>
+
+                    <!--solicita el texto que desee encriptar o desecriptar-->
+                    <div class="textoContainer">
+                        <input type="text" placeholder="Ingrese el texto aqui" id="ingresarTexto" oninput="ajustarTamanio()">
+                    </div>
+                </div>
+                
+                <!--botones de las operaciones de encriptar y desencriptar-->
+                <div class="botones">
+                    <!--alerta de las caracteristicas del texto-->
+                    <div class="alerta">
+                        <p><img src="./imagenes/bi_exclamation-circle-fill.png" alt="alerta">solo letras minusculas y sin acentos</p>
+                    </div>
+
+                    <button onclick="mostrarEncriptado()">Encriptar</button>
+                    <button onclick="mostrarDesencripotado()">Desencriptar</button>
+                </div>
+            </section>
+
+            <!--contenedor de resultados de la operacion seleccionada-->
+            <section class="resultado">
+
+                <!--contenido que se muestra en el momento que se realiza una operacion-->
+                <div class="resultadoOculto" id="resultadoOculto">
+                    <p id="textoResultado"></p>
+                    <button onclick="copiarResultado()">copiar</button>
+                </div>
+                <!--contenedos de contenido, se muestra en el momento que no tengamos texto-->
+                <div class="sinResultado" id="sinResultado">
+                    <img src="./imagenes/Muñeco.png" alt="muneco">
+
+                    <!--mensajes de texto no encontrado-->
+                    <div class="textoSinResultado">
+                        <p>Ningun mensaje fue encontrado</p>
+                        <p>Ingrese el texto que decea encripotar o desencriptar</p>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
